@@ -1,0 +1,47 @@
+@model IEnumerable<FollowAction1._0.Models.BuyerAction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idBuyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.actionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.actionTarget)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idBuyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actionTarget)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idAction">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idAction">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idAction">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

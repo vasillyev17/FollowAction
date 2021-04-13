@@ -1,0 +1,36 @@
+@model FollowAction1._0.Models.BuyerAction
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BuyerAction</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idBuyer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idBuyer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.actionType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.actionType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.actionTarget)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.actionTarget)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idAction">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
